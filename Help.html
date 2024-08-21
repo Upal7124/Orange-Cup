@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrangeCup - Help</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: white;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .navbar .logo span {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ff7e5f;
+        }
+		.menu-icon {
+            cursor: pointer;
+            display: block;
+            width: 30px;
+            height: 30px;
+            position: relative;
+            display: none;
+        }
+
+        .menu-icon div {
+            width: 100%;
+            height: 4px;
+            background-color: white;
+            margin: 6px 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar .nav-item {
+            display: flex;
+        }
+
+        .navbar .nav-item a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navbar .nav-item a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+		#toggle-menu {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+            }
+
+            .navbar .nav-item {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #333;
+                position: absolute;
+                top: 50px;
+                left: 0;
+            }
+
+            .navbar .nav-item a {
+                border-bottom: 1px solid #444;
+                padding: 10px 15px;
+                text-align: left;
+            }
+
+            .navbar .nav-item a:last-child {
+                border-bottom: none;
+            }
+
+            #toggle-menu:checked ~ .nav-item {
+                display: flex;
+            }
+        }
+        #welcome-heading {
+            color: white;
+            font-size: 2.5em;
+            margin-top: 100px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Help Section */
+        #help {
+            margin-top: 150px;
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #fff;
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #help img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        #help h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #ff7e5f;
+        }
+
+        #help h3 {
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #ff7e5f;
+        }
+
+        #help ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 1em;
+        }
+
+        #help ul li {
+            margin: 10px 0;
+        }
+
+        #help a {
+            color: #ff7e5f;
+            text-decoration: none;
+        }
+
+        #help a:hover {
+            color: #feb47b;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="OrangeCup">
+            <span>OrangeCup</span>
+        </div>
+		
+		<input type="checkbox" id="toggle-menu">
+        <label for="toggle-menu" class="menu-icon">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+		
+		
+        <div class="nav-item">
+            <a href="Home.html">Home</a>
+            <a href="Gallery.html">My Gallery</a>
+            <a href="MyMemories.html">My Memories</a>
+            <a href="Gifts.html">Gifts</a>
+            <a href="Contacts.html">Contacts</a>
+            <a href="Help.html">Help</a>
+        </div>
+    </div>
+
+    <h1 id="welcome-heading">Welcome to OrangeCup</h1>
+
+    <!-- Help Section -->
+    <section id="help">
+        <img src="logo.png" alt="OrangeCup Help">
+        <h2>Need Help?</h2>
+        <p>
+            If you have any questions or need assistance, our team is here to support you. Whether you're having trouble with your account, need help with our services, or just want to ask a question, we're just a message away.
+        </p>
+        <h3>Contact Our Support Team</h3>
+        <p>You can reach us via:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:support@orangecup.com">support@orangecup.com</a></li>
+            <li><strong>Phone:</strong> +1 234 567 890</li>
+            <li><strong>Live Chat:</strong> Available 24/7 on our website</li>
+        </ul>
+        <p>We're committed to providing you with the best service possible, so don't hesitate to reach out!</p>
+        <h3>Frequently Asked Questions (FAQ)</h3>
+        <p>Check out our <a href="#faq">FAQ section</a> for quick answers to common questions.</p>
+    </section>
+
+</body>
+
+</html>
